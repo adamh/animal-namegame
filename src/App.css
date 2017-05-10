@@ -1,0 +1,112 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans';
+    font-size: 16px;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.game-header {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.board-row-1 {
+  display: inline-block; 
+  vertical-align: bottom;
+}
+
+.board-row-2 {
+  display: inline-block; 
+  vertical-align: top;
+}
+
+table {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+td {
+  width: 20%;
+}
+
+.animal {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    float: left;
+    padding: 5px;
+}
+
+.animal img {
+    max-width: 100%;
+}
+
+.animal span {
+    font-size: 16px;
+    -webkit-transition: all .2s linear;
+    transition: all .5s linear;
+    opacity: 1;
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+    right: 5px;
+    top: 5px;
+
+    padding: 10px;
+    text-align: center;
+    color: white;
+    display: block;
+}
+
+
+.animal span h2 {
+    -webkit-transition: all .2s linear;
+    transition: all .5s linear;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+}
+
+.isClicked-false {
+  display: none;
+}
+.isClicked-true {
+  display: block;
+  //float: left;
+}
+
+.wrong {
+    background-color: rgba(200,0,0,0.5);
+}
+
+.wrong img {
+  opacity: .75 !important;
+}
+
+.right {
+    background-color: rgba(0,200,0,0.5);
+}
+
+.hidden {
+  display: none;
+}
