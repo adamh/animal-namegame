@@ -74,7 +74,7 @@ class Game extends Component {
 
   handleClick(i) {
     const newAnimals = this.state.animals.slice();
-    let hasWon = newAnimals[i].isWinner;
+    let hasWon = newAnimals[i].isWinner || this.state.hasWon;
     newAnimals[i].isClicked = true;
     this.setState({
       animals: newAnimals,
