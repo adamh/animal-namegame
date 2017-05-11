@@ -3,7 +3,7 @@ import './App.css';
 
 function Animal(props) {
   let buttonClass;
-  if (props.value.isClicked ) {
+  if (props.value.isClicked || props.hasWon) {
     if (props.value.isWinner) {
       buttonClass = "right";
     } else {
@@ -15,7 +15,7 @@ function Animal(props) {
   return (
     <button className={buttonClass + " animal"} onClick={props.onClick}>
       <img className="animal-image" src={props.value.img} alt="Animal pic"/>
-      <div className={"isClicked-" + props.value.isClicked}>
+      <div className={"isClicked-" + (props.value.isClicked || props.hasWon)}>
         <a href={props.value.link} target="_blank">
           <h2>Adopt Me 
           {!props.value.isWinner ? " Anyway" : <span></span>} 
@@ -35,6 +35,7 @@ class Board extends Component {
         onClick={() => {
           this.props.onClick(i)
         }}
+        hasWon={this.props.hasWon}
       />
       )
   }
@@ -49,11 +50,9 @@ class Board extends Component {
             <td className="row-1-cell">{this.renderAnimal(0)}</td>
             <td className="row-1-cell">{this.renderAnimal(1)}</td>
             <td className="row-1-cell">{this.renderAnimal(2)}</td>
-          </tr>
-          <tr className="board-row-2">
-            <td className="row-2-cell">{this.renderAnimal(3)}</td>
-            <td className="row-2-cell">{this.renderAnimal(4)}</td>
-            <td className="row-2-cell">{this.renderAnimal(5)}</td>
+            <td className="row-1-cell">{this.renderAnimal(3)}</td>
+            <td className="row-1-cell">{this.renderAnimal(4)}</td>
+            <td className="row-1-cell">{this.renderAnimal(5)}</td>
           </tr>
           </tbody>
         </table>
@@ -99,6 +98,7 @@ class Game extends Component {
         <Board
           animals={this.state.animals}
           onClick={i => this.handleClick(i)}
+          hasWon={this.state.hasWon}
         />
       </div>
     );
