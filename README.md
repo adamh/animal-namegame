@@ -5,7 +5,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Gets random animals from the [Web Scraper API](https://github.com/adamh/web-scraper-api).
 
 Player is asked which animal is named something and must pick from 6 different pictures. 
-Once a picture is chosen a link the the animal's Bio and Adoption Details appear.
+
+Once a picture is chosen a link to the the animal's Bio and Adoption Details appear.
 
 ## Example
 
