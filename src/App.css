@@ -12,10 +12,12 @@ body {
 
 h1 {
     font-size: 24px;
+    font-size: 3vw
 }
 
 h2 {
     font-size: 20px;
+    font-size: 2vw;
     padding: 0;
     margin: 0;
 }
@@ -36,13 +38,14 @@ h2 {
   vertical-align: top;
 }
 
-table {
+.board-table {
   margin-left: 5%;
   margin-right: 5%;
 }
 
-td {
+.row-1-cell {
   width: 16%;
+  float: left;
 }
 
 .animal {
@@ -92,7 +95,6 @@ td {
 }
 .isClicked-true {
   display: block;
-  //float: left;
 }
 
 .wrong {
@@ -100,7 +102,7 @@ td {
 }
 
 .wrong img {
-  opacity: .75 !important;
+  opacity: .66 !important;
 }
 
 .right {

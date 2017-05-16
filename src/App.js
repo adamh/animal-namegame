@@ -44,18 +44,16 @@ class Board extends Component {
     return (
       <div>
         <div className="status">{status}</div>
-        <table className="board-table">
-        <tbody>
-          <tr className="board-row-1">
-            <td className="row-1-cell">{this.renderAnimal(0)}</td>
-            <td className="row-1-cell">{this.renderAnimal(1)}</td>
-            <td className="row-1-cell">{this.renderAnimal(2)}</td>
-            <td className="row-1-cell">{this.renderAnimal(3)}</td>
-            <td className="row-1-cell">{this.renderAnimal(4)}</td>
-            <td className="row-1-cell">{this.renderAnimal(5)}</td>
-          </tr>
-          </tbody>
-        </table>
+        <div className="board-table">
+          <div className="board-row-1">
+            <div className="row-1-cell">{this.renderAnimal(0)}</div>
+            <div className="row-1-cell">{this.renderAnimal(1)}</div>
+            <div className="row-1-cell">{this.renderAnimal(2)}</div>
+            <div className="row-1-cell">{this.renderAnimal(3)}</div>
+            <div className="row-1-cell">{this.renderAnimal(4)}</div>
+            <div className="row-1-cell">{this.renderAnimal(5)}</div>
+          </div>
+        </div>
       </div>
       )
   }
@@ -90,7 +88,7 @@ class Game extends Component {
     return (
       <div className="game">
         <div className="game-header">
-          <h2>Who is {this.state.animals[this.props.winner].name}?</h2>
+          <h1>Who is {this.state.animals[this.props.winner].name}?</h1>
           <button className={buttonClass + " play-again"} onClick={() => this.handleReset()}>
             Play again
           </button>
