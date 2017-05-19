@@ -87,6 +87,12 @@ class Game extends Component {
     let buttonClass = this.state.hasWon ? "show" : "hidden";
     return (
       <div className="game">
+      <div className="corner-ribbon top-left sticky green shadow">
+        <a href="http://adamh.io">adamh.io</a>
+      </div>
+      <div className="corner-ribbon top-right sticky blue">
+        <a href="http://caspca.org">CASPCA</a>
+      </div>
         <div className="game-header">
           <h1>Who is {this.state.animals[this.props.winner].name}?</h1>
           <button className={buttonClass + " play-again"} onClick={() => this.handleReset()}>
