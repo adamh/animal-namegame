@@ -23,6 +23,6 @@ var render = function () {
     animals.forEach(function(obj) { obj.isClicked = false; });
     animals.forEach(function(obj, index) { 
     	obj.isWinner = index === winner ? true : false; });
-    render()
+    render();
   });
-})()
+})();
