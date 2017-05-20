@@ -16,11 +16,13 @@ var render = function () {
     );
 };
 
-$.get('http://adamh.io/spca-api/animals/random').then(function(data) {
-  animals = data;
-  winner = Math.round(Math.random()*animals.length)
-  animals.forEach(function(obj) { obj.isClicked = false; });
-  animals.forEach(function(obj, index) { 
-  	obj.isWinner = index === winner ? true : false; });
-  render()
-});
+(function(){
+  $.get('http://adamh.io/spca-api/animals/random').then(function(data) {
+    animals = data;
+    winner = Math.round(Math.random()*animals.length)
+    animals.forEach(function(obj) { obj.isClicked = false; });
+    animals.forEach(function(obj, index) { 
+    	obj.isWinner = index === winner ? true : false; });
+    render()
+  });
+})()
